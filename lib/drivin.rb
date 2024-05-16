@@ -26,7 +26,7 @@ module Drivin
   class << self
     extend Forwardable
 
-    def_delegators :config, :base_url
+    def_delegators :config, :base_url, :api_key
   end
 end
 

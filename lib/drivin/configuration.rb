@@ -4,7 +4,7 @@ module Drivin
   class Configuration
     attr_reader :base_url
 
-    attr_writer :api_key
+    attr_accessor :api_key
 
     def initialize
       @base_url = "https://api.driv.in"
