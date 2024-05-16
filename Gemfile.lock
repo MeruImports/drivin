@@ -1,11 +1,20 @@
+PATH
+  remote: .
+  specs:
+    driv.in (0.1.0)
+      zeitwerk (~> 2.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
+    zeitwerk (2.6.14)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  driv.in!
+  zeitwerk (~> 2.6)
 
 BUNDLED WITH
    2.1.4
