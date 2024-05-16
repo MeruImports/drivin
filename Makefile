@@ -1,4 +1,4 @@
-.PHONY: console linter build bash
+.PHONY: build console linter bash tests
 
 build:
 	docker-compose build
