@@ -2,7 +2,7 @@
 
 module Drivin
   class Error < StandardError
-    def self.for(e)
+    def self.for(_exception)
       new
     end
   end

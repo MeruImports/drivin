@@ -6,7 +6,7 @@ module Drivin
       extend Resource
 
       def self.create(params)
-        post("api/external/v2/users", params)
+        post('api/external/v2/users', params)
       end
     end
   end

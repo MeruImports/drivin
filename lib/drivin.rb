@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require "logger"
-require "forwardable"
+require 'logger'
+require 'forwardable'
 
-require "faraday"
-require "zeitwerk"
+require 'faraday'
+require 'zeitwerk'
 
 loader = Zeitwerk::Loader.for_gem
 loader.setup
