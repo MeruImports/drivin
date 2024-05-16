@@ -9,12 +9,8 @@ module Drivin
         post('api/external/v2/users', params)
       end
 
-      def self.get
-        get('api/external/v2/users')
-      end
-
-      def self.get_by_role(role_name)
-        get("api/external/v2/users?role_name=#{role_name}")
+      def self.all(params = EMPTY_PARAMS.dup)
+        get('api/external/v2/users', params)
       end
     end
   end
