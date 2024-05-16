@@ -1,8 +1,7 @@
 name: Continuous Integration
 
-on:
-  push:
-    branches: [main]
+on: push
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -10,6 +9,7 @@ jobs:
       group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}
       cancel-in-progress: true
     steps:
+      - uses: actions/checkout@v3
       - name: Build project
         run: make build
       - name: Run linter
