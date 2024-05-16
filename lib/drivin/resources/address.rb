@@ -9,8 +9,8 @@ module Drivin
         post('api/external/v2/addresses', params)
       end
 
-      def self.get
-        get('api/external/v2/addresses')
+      def self.get(params)
+        get('api/external/v2/addresses', params)
       end
     end
   end
