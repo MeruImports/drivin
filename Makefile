@@ -1,7 +1,13 @@
-.PHONY: console linter
+.PHONY: console linter build bash
+
+build:
+	docker-compose build
 
 console:
-	ruby bin/console
+	docker-compose run --rm app ruby bin/console
 
 linter:
-	bundle exec rubocop
+	docker-compose run --rm app bundle exec rubocop
+
+bash:
+	docker-compose run --rm app bash
