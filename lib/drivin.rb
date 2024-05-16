@@ -13,6 +13,10 @@ module Drivin
   extend Logger
   extend Connection
 
+  include Resources
+
+  EMPTY_PARAMS = {}.freeze
+
   def self.configure
     config.tap do |instance|
       yield instance if block_given?
