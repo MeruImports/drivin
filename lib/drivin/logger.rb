@@ -2,8 +2,10 @@
 
 module Drivin
   module Logger
+    attr_writer :logger
+
     def logger
-      @logger ||= ::Logger.new($stdout)
+      @logger ||= defined?(Rails) ? Rails.logger : ::Logger.new($stdout)
     end
   end
 end
