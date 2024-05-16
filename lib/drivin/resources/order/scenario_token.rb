@@ -6,7 +6,7 @@ module Drivin
       module ScenarioToken
         extend Resource
 
-        def self.create(scenario_token, params)
+        def self.create(scenario_token, params = EMPTY_PARAMS.dup)
           post("api/external/v2/orders?token=#{scenario_token}", params)
         end
 

@@ -5,11 +5,11 @@ module Drivin
     module Address
       extend Resource
 
-      def self.create(params)
+      def self.create(params = EMPTY_PARAMS.dup)
         post('api/external/v2/addresses', params)
       end
 
-      def self.get(params)
+      def self.get(params = EMPTY_PARAMS.dup)
         get('api/external/v2/addresses', params)
       end
     end

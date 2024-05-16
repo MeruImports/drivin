@@ -5,7 +5,7 @@ module Drivin
     module User
       extend Resource
 
-      def self.create(params)
+      def self.create(params = EMPTY_PARAMS.dup)
         post('api/external/v2/users', params)
       end
 

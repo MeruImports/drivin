@@ -6,7 +6,7 @@ module Drivin
       module SchemaCode
         extend Resource
 
-        def self.create(schema_code, params)
+        def self.create(schema_code, params = EMPTY_PARAMS.dup)
           post("api/external/v2/orders?schema_code=#{schema_code}", params)
         end
       end
