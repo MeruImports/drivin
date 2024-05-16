@@ -1,4 +1,4 @@
-.PHONY: console linter build bash
+.PHONY: build console linter bash tests
 
 build:
 	docker-compose build
@@ -11,3 +11,6 @@ linter:
 
 bash:
 	docker-compose run --rm app bash
+
+tests:
+	docker-compose run --rm app bundle exec rspec
