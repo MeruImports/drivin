@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    driv.in (0.1.0)
+    drivin (0.1.0)
       faraday (~> 2.8)
       zeitwerk (~> 2.6)
 
@@ -79,7 +79,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  driv.in!
+  drivin!
   rspec
   rubocop
   rubocop-performance
