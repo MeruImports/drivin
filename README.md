@@ -13,7 +13,7 @@ gem 'drivin', git: 'git@github.com/MeruImports/drivin'
 
 Before using the gem, configure it in your application. You can create an initializer to set up the configuration. Provide your api key. Here's an example using the `drivin` gem in a Ruby on Rails application:
 
-1. Create a new initializer file in the `config/initializers` directory of your Rails application. For example, you can create a file named `kushki.rb`.
+1. Create a new initializer file in the `config/initializers` directory of your Rails application. For example, you can create a file named `drivin.rb`.
 
 2. In the initializer file, configure the `drivin` gem as follows:
 
