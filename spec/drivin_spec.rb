@@ -6,22 +6,22 @@ RSpec.describe Drivin do
   end
 
   it 'has a logger' do
-    expect(Drivin.logger).to be_a(Logger)
+    expect(described_class.logger).to be_a(Logger)
   end
 
   it 'has a api base url' do
-    expect(Drivin.base_url).to eq('https://api.driv.in')
+    expect(described_class.base_url).to eq('https://api.driv.in')
   end
 
   it 'has a configuration' do
-    expect(Drivin.config).to be_a(Drivin::Configuration)
+    expect(described_class.config).to be_a(Drivin::Configuration)
   end
 
   it 'has a api_key method' do
-    expect(Drivin.respond_to?(:api_key)).to be_truthy
+    expect(described_class).to respond_to(:api_key)
   end
 
   it 'has a faraday connection' do
-    expect(Drivin.connection).to be_a(Faraday::Connection)
+    expect(described_class.connection).to be_a(Faraday::Connection)
   end
 end
