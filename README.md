@@ -6,7 +6,7 @@ The drivin ruby library provides convenient access to the Driv.in API from appli
 Add this to your Gemfile and run `bundle install`:
 
 ```ruby
-gem 'drivin', git: 'git@github.com/MeruImports/drivin'
+gem 'drivin', git: 'git@github.com:MeruImports/drivin.git'
 ```
 
 ### Configuration
