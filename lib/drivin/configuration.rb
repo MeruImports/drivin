@@ -7,7 +7,7 @@ module Drivin
     attr_accessor :api_key
 
     def initialize
-      @base_url = 'https://api.driv.in'
+      @base_url = 'https://external.driv.in'
     end
   end
 end
