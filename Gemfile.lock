@@ -3,7 +3,7 @@ PATH
   specs:
     drivin (0.1.0)
       faraday (>= 1, < 2.0)
-      zeitwerk (~> 2.6)
+      zeitwerk (>= 2.2.2, < 3.0)
 
 GEM
   remote: https://rubygems.org/
