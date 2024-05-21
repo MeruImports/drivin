@@ -11,9 +11,10 @@ module Drivin
     end
 
     def self.for(exception)
-      response = exception.response.with_indifferent_access
-      message = response.dig('body', 'response', 'description')
-      new(message, exception.response, response['status'])
+      response = exception.response
+      http_body = response[:body]
+      message = http_body.dig('response', 'description')
+      new(message, response, response[:status])
     end
   end
 end
