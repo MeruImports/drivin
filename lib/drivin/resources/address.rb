@@ -9,7 +9,7 @@ module Drivin
         post('api/external/v2/addresses', params)
       end
 
-      def self.get(params = EMPTY_PARAMS.dup)
+      def self.all(params = EMPTY_PARAMS.dup)
         get('api/external/v2/addresses', params)
       end
     end
