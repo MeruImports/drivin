@@ -22,6 +22,7 @@ Before using the gem, configure it in your application. You can create an initia
 
 Drivin.configure do |config|
   config.api_key = "your_private_key"
+  config.base_url = "your_drivin_url"
   config.logger = YourCustomLogger.new($stdout) # Optional custom logger, or gem take Rails logger or default ruby logger
 end
 ```
