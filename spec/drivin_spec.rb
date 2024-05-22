@@ -10,7 +10,7 @@ RSpec.describe Drivin do
   end
 
   it 'has a api base url' do
-    expect(described_class).to respond_to(:base_url)
+    expect(described_class.base_url).to eq('https://external-qa.driv.in')
   end
 
   it 'has a configuration' do
