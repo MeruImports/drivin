@@ -10,7 +10,7 @@ RSpec.describe Drivin do
   end
 
   it 'has a api base url' do
-    expect(described_class.base_url).to eq('https://external.driv.in')
+    expect(described_class.base_url).to eq('https://external-qa.driv.in')
   end
 
   it 'has a configuration' do
@@ -23,5 +23,17 @@ RSpec.describe Drivin do
 
   it 'has a faraday connection' do
     expect(described_class.connection).to be_a(Faraday::Connection)
+  end
+
+  context 'when live_mode is enabled' do
+    before do
+      described_class.configure do |config|
+        config.livemode = true
+      end
+    end
+
+    it 'changes the base_url' do
+      expect(described_class.base_url).to eq('https://external.driv.in')
+    end
   end
 end
