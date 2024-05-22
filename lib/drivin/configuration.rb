@@ -2,7 +2,6 @@
 
 module Drivin
   class Configuration
-    attr_accessor :base_url
-    attr_accessor :api_key
+    attr_accessor :base_url, :api_key
   end
 end
