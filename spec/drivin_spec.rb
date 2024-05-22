@@ -24,4 +24,16 @@ RSpec.describe Drivin do
   it 'has a faraday connection' do
     expect(described_class.connection).to be_a(Faraday::Connection)
   end
+
+  context 'when live_mode is enabled' do
+    before do
+      Drivin.configure do |config|
+        config.livemode = true
+      end
+    end
+
+    it 'changes the base_url' do
+      expect(Drivin.base_url).to eq('https://external.driv.in')
+    end
+  end
 end
