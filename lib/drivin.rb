@@ -30,7 +30,7 @@ module Drivin
   class << self
     extend Forwardable
 
-    def_delegators :config, :base_url, :api_key, :livemode?, :livemode=
+    def_delegators :config, :base_url, :api_key, :livemode?, :livemode=, :reset!
   end
 end
 

@@ -32,6 +32,8 @@ RSpec.describe Drivin do
       end
     end
 
+    after { described_class.reset! }
+
     it 'changes the base_url' do
       expect(described_class.base_url).to eq('https://external.driv.in')
     end

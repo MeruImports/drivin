@@ -6,9 +6,15 @@ module Drivin
 
     attr_accessor :api_key
 
+    QA_BASE_URL = 'https://external-qa.driv.in'
+    private_constant :QA_BASE_URL
+
+    PROD_BASE_URL = 'https://external.driv.in'
+    private_constant :PROD_BASE_URL
+
     def initialize
       @livemode = false
-      @base_url = 'https://external-qa.driv.in'
+      @base_url = QA_BASE_URL
     end
 
     def livemode?
@@ -22,10 +28,15 @@ module Drivin
       livemode! if @livemode
     end
 
+    def reset!
+      @livemode = false
+      @base_url = QA_BASE_URL
+    end
+
     private
 
     def livemode!
-      @base_url = 'https://external.driv.in'
+      @base_url = PROD_BASE_URL
     end
   end
 end
