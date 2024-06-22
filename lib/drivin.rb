@@ -27,10 +27,15 @@ module Drivin
     @config ||= Configuration.new
   end
 
+  def self.reset!
+    @config = nil
+    @connection = nil
+  end
+
   class << self
     extend Forwardable
 
-    def_delegators :config, :base_url, :api_key, :livemode?, :livemode=, :reset!
+    def_delegators :config, :base_url, :api_key, :livemode?, :livemode=
   end
 end
 

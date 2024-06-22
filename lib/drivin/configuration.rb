@@ -28,11 +28,6 @@ module Drivin
       livemode! if @livemode
     end
 
-    def reset!
-      @livemode = false
-      @base_url = QA_BASE_URL
-    end
-
     private
 
     def livemode!

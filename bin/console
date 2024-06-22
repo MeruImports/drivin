@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "../lib/drivin"
+require_relative '../lib/drivin'
 
-require "irb"
+require 'irb'
 IRB.start
